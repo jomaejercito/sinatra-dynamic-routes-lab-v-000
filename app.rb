@@ -7,10 +7,9 @@ class App < Sinatra::Base
     "#{@name.reverse}"
   end
 
-  get "/multiply/:num1/:num2" do
-    @num1 = params[:num1].to_i
-    @num2 = params[:num2].to_i
-    "#{@num1 * @num2}"
+  get "/square/:number" do
+    @number = params[:number].to_i
+    "#{@number * @number}"
   end
 
   get "/goodbye/:name" do
